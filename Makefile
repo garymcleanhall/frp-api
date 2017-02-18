@@ -13,3 +13,5 @@ test:
 	$(MAKE) run
 	$(bin-dir)jasmine ./*test*.js || $(MAKE) stop
 
+debug:
+	node index.js
