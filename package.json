@@ -1,0 +1,31 @@
+{
+  "name": "frp-api",
+  "version": "1.0.0",
+  "description": "Sample api to demonstrate (limited) functional features of js",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.1",
+    "funcy": "0.0.4",
+    "highland": "^2.10.2",
+    "pm2": "^2.4.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "frisby": "vlucas/frisby#v2"
+  },
+  "scripts": {
+    "start": "make run",
+    "stop": "make stop",
+    "test": "make run && make test && make stop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/garymcleanhall/frp-api.git"
+  },
+  "author": "Gary McLean Hall <gary@igirisu.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garymcleanhall/frp-api/issues"
+  },
+  "homepage": "https://github.com/garymcleanhall/frp-api#readme"
+}
