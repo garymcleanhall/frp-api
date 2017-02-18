@@ -18,10 +18,13 @@ let catchall = (handler) => {
 }
 
 let router = fun(
-  route('/', (response) => { 
+  route('/', response => { 
     return [ response, { status: 200, body: 'Hello World!' } ] 
   }),
-  catchall((response) => { 
+  route('/foo', response => {
+    return [ response, { status: 418, body: 'BAR!' } ]
+  }),
+  catchall(response => { 
     return [ response, { status: 400 } ] 
   })
 )
@@ -32,7 +35,7 @@ let responder = fun(
       response.status(status).send(body)
     }
   ),
-  matcher([fun.parmaeter, {status: fun.parameter}],
+  matcher([fun.parameter, {status: fun.parameter}],
     (response, status) => {
       response.sendStatus(status)
     }
